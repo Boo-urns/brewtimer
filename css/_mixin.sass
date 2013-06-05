@@ -1,0 +1,12 @@
+@mixin round-corners($radius: 5px)
+	-webkit-border-radius: $radius
+	//-moz-border-radius: $radius
+	border-radius: $radius
+
+@mixin round-corners-specific($top-left: 0, $top-right: 0, $bottom-right: 0, $bottom-left: 0)
+	//-moz-border-radius-topleft: $top-left
+	//-moz-border-radius-topright: $top-right
+	//-moz-border-radius-bottomright: $bottom-right
+	//-moz-border-radius-bottomleft: $bottom-left
+	-webkit-border-radius: $top-left $top-right $bottom-right $bottom-left
+	border-radius: $top-left $top-right $bottom-right $bottom-left

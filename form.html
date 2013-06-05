@@ -1,0 +1,68 @@
+<form novalidate class="simple-form">
+        
+        <span class="boilTime">{{user.boilTime}}</span>
+        <label>Boil Time</label>
+          <input type="range" ng-model="user.boilTime" min="20" max="120" step="1">
+
+
+        <div class="holo-field">
+          <input type="text" ng-model="user.name" placeholder="Name" >
+        </div>
+
+
+        <div class="holo-field">
+          <label>Vibrate Notifications</label>
+          
+          <input type="radio" ng-model="user.vibrate" value="y">yes
+          <input type="radio" ng-model="user.vibrate" value="n">no
+        </div>
+        
+        
+        
+        <div class="holo-field">
+          <input ng-model="amount" placeholder="Amt" type="number" min="0">
+        </div>
+        
+        <label class="toggle">
+          <input type="checkbox" ng-model="addDefaults.unit">
+          <p>
+            <span>g</span>
+            <span>oz</span>
+            <a class="slide rounded"></a>
+          </p>
+        </label>
+
+        <div class="holo-field">
+          <input ng-model="searchHops.name" ng-change="hopChange()" placeholder="Hops" autofocus>
+        </div>
+
+        <ul ng-hide="clicked" id="suggest">
+          <li ng-click="hopMatch(hop.name)" ng-show="searchHops.name" ng-repeat="hop in hops | filter:searchHops | limitTo: 9"   ng-animate="{enter: 'list-enter', leave: 'list-leave'}" >
+              {{ hop.name }}
+          </li>
+        </ul>
+
+
+        {{addDefaults.evTime}}
+        <input type="range" ng-model="addDefaults.evTime" min="0" max="120" step="1">
+
+        <button ng-click="addEvent(user)">ADD</button>
+      
+
+        <ul>
+          <li ng-repeat="schedule in user.boilSchedule">
+            {{schedule.amt}}{{ schedule.unit }} {{schedule.name}} @ {{schedule.time}} 
+            <button ng-click="deleteEvent(user, $index)" ng-animate="{enter: 'list-enter', leave: 'list-leave'">X</button>
+          </li>
+        </ul>
+
+        {{user.getSchedule}}
+
+
+
+        <button ng-click="reset()">RESET TO DEFAULT</button>
+        <button ng-click="save(user)">SAVE</button>
+      </form>
+      <pre>user = {{user | json}}</pre>
+      <pre>master = {{master | json}}</pre>
+      <pre>hops = {{hops | json}}

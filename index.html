@@ -1,0 +1,138 @@
+<!doctype html>
+<html ng-app="myApp">
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" >
+
+    <!-- Don't think I need for app! -->
+    <link href='http://fonts.googleapis.com/css?family=Roboto:400,100,700,400italic,500italic' rel='stylesheet' type='text/css'>
+
+
+    <!-- <link rel="stylesheet" href="css/style.css"> -->
+    
+    <style>
+      body {
+        font-family: 'Roboto', sans-serif;
+      }
+      .toggle {
+        position: relative;
+        float: left;
+        width: 100%;
+      }  
+        
+       .toggle span {
+          position: relative;
+          float: left;
+          width: 80%;
+        }
+        .toggle p {
+          position: relative;
+          float: right;
+          width: 20%;
+          max-width: 150px;
+          background: #222;
+          color: #fff;
+          height: 25px;
+          margin-top: 0;
+        }
+        .toggle p span {
+            width: 49%;
+            text-align: center;
+            text-transform: uppercase;
+            margin-top: 2px;
+            z-index: 1;
+        }
+      a.slide {
+        width: 49%;
+        background: #ccc;
+        height: 21px;
+        top: 2px;
+        position: absolute;
+        left: 1%;
+        transition: all 0.1s ease-in;
+      }
+        
+      input[type=checkbox] {
+        display: none;
+      }
+        
+      input[type=checkbox]:checked ~ p a.slide {
+        left: 50%;
+        position: absolute;
+        transition: all 0.1s ease-in;
+        background: #2fa8d5;
+      }
+          
+      .rounded {
+        -webkit-border-radius: 2px;
+        border-radius: 2px;
+      }
+
+/*
+ The list-enter prefix is the event name that you
+ have provided within the ngAnimate attribute.
+*/
+.list-enter-setup, .list-leave-setup {
+ -webkit-transition: 0.25s linear opacity; /* Safari/Chrome */
+ -moz-transition: .25s linear opacity; /* Firefox */
+ -ms-transition: .25s linear opacity; /* IE10 */
+ -o-transition: .25s linear opacity; /* Opera */
+ transition: 0.25s linear opacity; /* Future Browsers */
+ /* The animation preparation code */
+}
+ 
+.list-enter-setup {
+ opacity: 0;
+}
+
+
+.list-enter-start {
+  opacity: 1;
+}
+
+.list-leave-setup {
+  opacity: 1;
+}
+
+.list-leave-start {
+  opacity: 0;
+}
+
+
+
+
+
+    #suggest {
+      background: #ccc;
+      list-style-type: none;
+      position: relative;
+      float: left;
+      width: 100%;
+    }
+    
+    #suggest li {
+      height: 20px;
+      background: lime;
+      overflow: hidden;
+    }
+    
+
+    </style>
+    
+    <script src="http://code.angularjs.org/1.1.4/angular.min.js"></script>
+    <!--<script src="js/angular.min.js"></script>-->
+    <script src="js/form-test2.js"></script>
+  </head>
+  <body>
+    <a href="#/timer">Let's get Brewing!</a>
+    <div ng-controller="FormCtrl">
+    
+      <header>
+        <h1>{{user.name}}</h1>
+      </header>
+      
+      <div ng-view></div>
+      
+      
+    </div>
+  </body>
+</html>

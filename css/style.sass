@@ -1,0 +1,38 @@
+
+$brown: #3d2d23
+$light-brown: #786c5b
+$yellow: #ffc90e
+$pale-yellow: #fffddb
+$green: #d3ce3d
+
+@import "normalize"
+@import "mixin"
+@import "forms"
+/* apply a natural box layout model to all elements */
+*
+	-moz-box-sizing: border-box
+	-webkit-box-sizing: border-box
+	box-sizing: border-box
+
+body
+	background: $brown
+	font-family: 'Roboto', sans-serif
+	font-weight: 400
+	//letter-spacing: 1px
+	
+header
+	background: $light-brown
+	border-bottom: 2px solid #a1988d
+	height: 40px
+	width: 100%
+	margin-top: 0
+	position: relative
+	float: left
+
+	h1
+		text-align: center
+		font-size: 32sp
+		//font-size: 32px
+		margin-top: 0
+		font-weight: normal
+		color: $brown

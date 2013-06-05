@@ -1,0 +1,82 @@
+.holo-field
+  position: relative
+  float: left
+  clear: both
+  width: 100%
+
+.holo-field:before
+  content: '\00a0'
+  position: absolute
+  border-left: 1px solid $light-brown
+  bottom: 20px  // bottom: 20px because margin-bottom on inputs!
+  height: 10px
+
+.holo-field:after
+  content: '\00a0'
+  position: absolute
+  border-right: 1px solid $light-brown
+  bottom: 20px
+  right: 0
+  height: 10px
+
+form
+  padding: 0 15px
+  font-size: 16px
+  font-size: 16sp
+
+label
+  color: #eee
+  position: relative
+  float: left
+  clear: both
+  width: 100%
+  
+input
+  width: 100%
+  padding: 5px
+  border: none
+  background: $brown
+  color: #fff
+  border-bottom: 1px solid $light-brown
+  z-index: 1
+  margin-bottom: 20px
+
+input:focus
+  border: 1px solid $light-brown
+
+input[type='range']
+  -webkit-appearance: none
+  background-color: $light-brown
+  height: 1px
+  padding: 0
+  position: relative
+  float: left
+  border-bottom: none
+
+input[type='range']::-webkit-slider-thumb
+  -webkit-appearance: none !important
+  height: 20px
+  width: 20px
+  @include round-corners(10px)
+  background: $yellow
+  border: 2px solid $pale-yellow
+
+button
+  padding: 10px
+  color: $brown
+  background: $pale-yellow
+  border: none
+
+  &:active
+    background: $light-brown
+
+
+// app specific form styles
+.boilTime
+  position: relative
+  float: left
+  color: $yellow
+  width: 100%
+  text-align: center
+  font-size: 150px
+  font-weight: 100

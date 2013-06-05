@@ -1,0 +1,49 @@
+[
+    {
+        "name": "Admiral",
+        "country": "UK", 
+        "aa": "13.5 - 16",
+        "beta": "",
+        "character": "Bred as a replacement for Target with a less harsh bitterness. Weak aroma with mild citrus character.",
+        "sub": "Target, Challenger"
+    }, 
+    {
+        "name": "Ahtanum",
+        "country": "US", 
+        "aa": "5.7 - 6.3",
+        "beta": "",
+        "character": "Citrus and floral character, with grapefruit qualities said to be stronger than in Cascade. Ahtanum may also feature resiny or earth notes.",
+        "sub": "Cascade, Amarillo"
+    }, 
+    {
+        "name": "Amarillo",
+        "country": "US", 
+        "aa": "8 - 11",
+        "beta": "6 - 7",
+        "character": "Floral, grapefruit, citrus, peach.",
+        "sub": "Cascade, Centennial, Citra"
+    },
+    {
+        "name": "Bravo"
+    }, 
+    {
+        "name": "Cascade"
+    }, 
+    {
+        "name": "Centennial"
+    }, 
+    {
+        "name": "Chinook"
+    }, 
+
+    {
+    		"name": "Citra",
+    		"country": "US",
+    		"aa": "10 - 12",
+    		"beta": "3.5 - 4.5",
+    		"character": "Potent aroma of intense mango, tropical fruit and citrus. Flavor is a bit smoother, less specific but still intense. Extremely effective as a dry hop and late addition hop.",
+    		"sub": "Galaxy, Centennial, Nelson Sauvin"
+
+    }
+
+]

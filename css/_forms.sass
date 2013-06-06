@@ -71,6 +71,102 @@ button
     background: $light-brown
 
 
+
+
+
+// ---
+// Toggle Checkbox Styles
+// ---
+
+.toggle
+  position: relative
+  float: left
+  width: 100%
+
+  span
+    position: relative
+    float: left
+    width: 80%
+
+  p
+    position: relative
+    float: right
+    width: 20%
+    max-width: 150px
+    background: #222
+    color: #fff
+    height: 25px
+    margin-top: 0
+
+    span
+      width: 49%
+      text-align: center
+      text-transform: uppercase
+      margin-top: 2px
+      z-index: 1
+
+a.slide
+  width: 49%
+  background: #ccc
+  height: 21px
+  top: 2px
+  position: absolute
+  left: 1%
+  transition: all 0.1s ease-in
+  -webkit-transition: all 0.1s ease-in
+
+
+input[type=checkbox]
+  display: none
+
+input[type=checkbox]:checked ~ p a.slide
+  left: 50%
+  position: absolute
+  -webkit-transition: all 0.1s ease-in
+  transition: all 0.1s ease-in
+  background: $yellow
+
+
+
+
+
+// ---
+// List Enter for use with filter
+// ---
+/*
+ * The list-enter prefix is the event name that you
+ * have provided within the ngAnimate attribute. */
+
+.list-enter-setup, 
+.list-leave-setup
+  -webkit-transition: 0.25s linear opacity 
+  transition: 0.25s linear opacity
+  opacity: 0
+
+.list-enter-start,
+.list-leave-setup
+  opacity: 1
+
+.list-leave-start
+  opacity: 0
+
+
+// ---
+// Suggest list to be used with list-enter
+// ---
+.suggest
+  background: #ccc
+  position: relative
+  float: left
+  width: 100%
+
+  li
+    height: 20px
+    background: lime
+    overflow: hidden
+
+
+
 // app specific form styles
 .boilTime
   position: relative

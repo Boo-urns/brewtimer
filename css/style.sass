@@ -14,11 +14,13 @@ $green: #d3ce3d
 	-webkit-box-sizing: border-box
 	box-sizing: border-box
 
+html
+	background: $brown
+
 body
 	background: $brown
 	font-family: 'Roboto', sans-serif
 	font-weight: 400
-	//letter-spacing: 1px
 	
 header
 	background: $light-brown
@@ -31,8 +33,17 @@ header
 
 	h1
 		text-align: center
-		font-size: 32sp
-		//font-size: 32px
+		font-size: 32px
 		margin-top: 0
 		font-weight: normal
 		color: $brown
+
+.rounded
+	-webkit-border-radius: 2px
+	border-radius: 2px
+
+a
+	color: $pale-yellow
+
+	&:visited
+		color: $pale-yellow

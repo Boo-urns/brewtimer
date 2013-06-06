@@ -36,7 +36,7 @@
           <input ng-model="searchHops.name" ng-change="hopChange()" placeholder="Hops" autofocus>
         </div>
 
-        <ul ng-hide="clicked" id="suggest">
+        <ul ng-hide="clicked" class="suggest">
           <li ng-click="hopMatch(hop.name)" ng-show="searchHops.name" ng-repeat="hop in hops | filter:searchHops | limitTo: 9"   ng-animate="{enter: 'list-enter', leave: 'list-leave'}" >
               {{ hop.name }}
           </li>

@@ -17,7 +17,7 @@
           <input type="radio" ng-model="user.vibrate" value="n">no
         </div>
         
-        
+         
         
         <div class="holo-field">
           <input ng-model="amount" placeholder="Amt" type="number" min="0">
@@ -61,7 +61,7 @@
 
 
         <button ng-click="reset()">RESET TO DEFAULT</button>
-        <button ng-click="save(user)">SAVE</button>
+        <button ng-click="save(user)" class="save">SAVE</button>
       </form>
       <pre>user = {{user | json}}</pre>
       <pre>master = {{master | json}}</pre>

@@ -1,5 +1,5 @@
 'use strict';
-var app = angular.module('brewTimer', []);
+var app = angular.module('brewApp', []);
 
 app.config(function ($routeProvider) {
   // Configure the routes
@@ -96,26 +96,4 @@ app.controller( 'FormCtrl', function FormCtrl($scope, $http, storage) {
   };
 
 
-});
-
-
-
-
-app.service('storage', function() {
-
-  this.setItem    = function(key, val) {
-    localStorage.setItem(key, JSON.stringify(val));
-  };
-
-  this.getItem    = function(key) {
-    return JSON.parse(localStorage.getItem(key));
-  };
-
-  this.clear      = function() {
-    localStorage.clear();
-  };
-
-  this.removeItem = function(key) {
-    localStorage.removeItem(key);
-  }
 });

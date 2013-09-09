@@ -65,7 +65,7 @@ app.controller( 'FormCtrl', function FormCtrl($scope, $http, storage) {
     $scope.user.boilSchedule.push({ 
        amt: amt,
       unit: unit,
-      name: $scope.searchHops.name, 
+      name: $scope.hops.name, 
       time: $scope.addDefaults.evTime, 
       done: false
     });
@@ -80,9 +80,9 @@ app.controller( 'FormCtrl', function FormCtrl($scope, $http, storage) {
 
   
   // HOPS
-  // $http.get('json/hops.json').success(function(data) {
-  //   $scope.hops = data;
-  // });
+   $http.get('json/hops.json').success(function(data) {
+     $scope.hops = data;
+   });
 
   // hopChange() is setup to reshow the ul of the hop matches! 
   $scope.hopChange = function() {
@@ -91,9 +91,10 @@ app.controller( 'FormCtrl', function FormCtrl($scope, $http, storage) {
 
   // hopMatch() a user clicks on the hop they want, hides the list.
   $scope.hopMatch = function(hop){
-    $scope.searchHops.name = hop;
-    $scope.clicked = true;
+      $scope.hops.name = hop;
+      $scope.clicked = true;
   };
+
 
 
 });

@@ -33,15 +33,14 @@
         </label>
 
         <div class="holo-field">
-          <input ng-model="searchHops.name" ng-change="hopChange()" placeholder="Hops" autofocus>
+          <input ng-model="hops.name" ng-change="hopChange()" placeholder="Hops">
         </div>
 
         <ul ng-hide="clicked" class="suggest">
-          <li ng-click="hopMatch(hop.name)" ng-show="searchHops.name" ng-repeat="hop in hops | filter:searchHops | limitTo: 9"   ng-animate="{enter: 'list-enter', leave: 'list-leave'}" >
+          <li ng-click="hopMatch(hop.name)" ng-show="hops.name" ng-repeat="hop in hops | filter:hops.name | limitTo: 9"   ng-animate="{enter: 'list-enter', leave: 'list-leave'}" >
               {{ hop.name }}
           </li>
         </ul>
-
 
         {{addDefaults.evTime}}
         <input type="range" ng-model="addDefaults.evTime" min="0" max="120" step="1">

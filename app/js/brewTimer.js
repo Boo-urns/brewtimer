@@ -19,7 +19,6 @@ app.config(function ($routeProvider) {
 
 
 app.controller( 'FormCtrl', function FormCtrl($scope, $http, storage) {
-
 	$scope.defaults = {
 											name: 'Test',
 											boilTime: 65,
@@ -80,7 +79,7 @@ app.controller( 'FormCtrl', function FormCtrl($scope, $http, storage) {
 
   
   // HOPS
-  $http.get('json/hops.json').success(function(data) {
+  $http.get('../json/hops.json').success(function(data) {
     $scope.hops = data;
   });
 
@@ -91,7 +90,7 @@ app.controller( 'FormCtrl', function FormCtrl($scope, $http, storage) {
 
   // hopMatch() a user clicks on the hop they want, hides the list.
   $scope.hopMatch = function(hop){
-    $scope.searchHops.name = hop;
+    $scope.userHop = 'WTF';
     $scope.clicked = true;
   };
 

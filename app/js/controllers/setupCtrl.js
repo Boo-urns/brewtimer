@@ -5,13 +5,15 @@ app.config(function ($routeProvider) {
   // Configure the routes
   $routeProvider
     .when('/', {
-      // List the form
-      templateUrl: 'form.html'
+      // List the form to setup your brew schedule
+      templateUrl: 'setup.html'
     })
-    .when('/timer', {
-      // Setup the Timer
-      templateUrl: 'test-template.html'
-    });
+
+    .when('/schedule', {
+      // Display Boil Schedule with Timer
+      templateUrl: 'schedule.html',
+      controller: 'TimerCtrl'
+    })
 
     
 
@@ -98,3 +100,8 @@ app.controller( 'FormCtrl', function FormCtrl($scope, $http, storage) {
 
 
 });
+
+
+// app.controller( 'TimerCtrl', function TimerCtrl($scope, storage) {
+
+// });

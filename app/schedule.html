@@ -7,4 +7,10 @@
 	<button ng-model="pauseBtn" data-ng-click="pause()" ng-disabled="!started" ng-hide="!started">PAUSE</button> 
 	<button ng-click="resume()" ng-hide="pauseBtn" ng-disabled="pauseBtn">RESUME</button>
 
-	
+	<h2>Schedule</h2>
+	<ul id="schedule">
+		<li ng-repeat="schedule in master.boilSchedule" ng-class="{'strike' : schedule.checked, 'next' : schedule.time >= minutes - 2, 'current' : schedule.time >= minutes - 1 } ">
+			{{schedule.amt}}{{ schedule.unit }} {{schedule.name}} @ {{schedule.time}} 
+			<input type="checkbox" ng-model="schedule.checked">
+		</li>
+	</ul>

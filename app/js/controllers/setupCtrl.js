@@ -31,6 +31,7 @@ app.controller( 'FormCtrl', function FormCtrl($scope, $http, storage) {
 										};
 
 	$scope.addDefaults = {
+                          amt: null,
                           unit: true,
 													evTime: $scope.defaults.boilTime
 												};
@@ -55,17 +56,11 @@ app.controller( 'FormCtrl', function FormCtrl($scope, $http, storage) {
   // BOIL EVENTS
   $scope.addEvent = function(user) {
    
-    var unit;
-    var amt  = $scope.amount;
-
-    if(amt != undefined) {
-       unit = $scope.addDefaults.unit === true ? 'oz' : 'g';
-    } else {
-      unit = '';
-    }
+    var amount  = $scope.addDefaults.amt;
+    var unit    = $scope.addDefaults.unit === true ? 'oz' : 'g';
 
     $scope.user.boilSchedule.push({ 
-       amt: amt,
+       amt: amount,
       unit: unit,
       name: $scope.hops.name, 
       time: $scope.addDefaults.evTime, 
@@ -100,8 +95,3 @@ app.controller( 'FormCtrl', function FormCtrl($scope, $http, storage) {
 
 
 });
-
-
-// app.controller( 'TimerCtrl', function TimerCtrl($scope, storage) {
-
-// });

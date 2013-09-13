@@ -1,4 +1,4 @@
-
+// Colors
 $brown: #3d2d23
 $light-brown: #786c5b
 $yellow: #ffc90e
@@ -14,9 +14,13 @@ $green: #d3ce3d
 	-webkit-box-sizing: border-box
 	box-sizing: border-box
 
+
 // Angular JS styles \\
+// - remove flash of unloaded content \\
 [ng\:cloak], [ng-cloak], [data-ng-cloak], [x-ng-cloak], .ng-cloak, .x-ng-cloak
 	display: none !important
+
+
 
 html
 	background: $brown
@@ -51,3 +55,30 @@ a
 
 	&:visited
 		color: $pale-yellow
+
+
+
+
+// Schedule page (aka Timer!)
+
+#schedule li
+	color: #d3ce3d
+	margin-left: 0
+	width: 100%
+	position: relative
+	float: left
+	list-style-type: none
+
+.strike
+	text-decoration: line-through
+
+// li styles
+.next, 
+.current
+	font:
+		size: 18px
+		weight: bold
+	
+.current
+	font-size: 28px
+	color: #b9d33d

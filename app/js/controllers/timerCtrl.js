@@ -52,5 +52,13 @@ app.controller( 'TimerCtrl', function CountdownCtrl($scope,$timeout) {
 			$scope.pauseBtn = 1;
 			$scope.start();
 		}
+
+    window.onresize = function() {
+      var h = window.innerHeight;
+      var c = document.getElementById('flex-container');
+      c.style.height = h + 'px';
+    }
+
+    window.onresize();
      
 });

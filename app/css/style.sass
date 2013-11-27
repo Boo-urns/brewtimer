@@ -1,9 +1,16 @@
 // Colors
+$white: #eee
+
 $brown: #3d2d23
-$light-brown: #786c5b
-$yellow: #ffc90e
-$pale-yellow: #fffddb
-$green: #d3ce3d
+$light-brown: #ac9486
+$med-brown: #5d543e
+
+$green: #ccc73b
+$dark-green: #928e29
+
+
+
+
 
 @import "normalize"
 @import "mixin"
@@ -23,17 +30,17 @@ $green: #d3ce3d
 
 
 html
-	background: $brown
+	background: $white
 
 body
-	background: $brown
+	background: $white
 	font-family: 'Roboto', sans-serif
 	font-weight: 400
 	
 header
-	background: $light-brown
-	border-bottom: 2px solid #a1988d
-	height: 40px
+	background: $green
+	border-bottom: 3px solid $dark-green
+	height: 50px
 	width: 100%
 	margin-top: 0
 	position: relative
@@ -42,7 +49,7 @@ header
 	h1
 		text-align: center
 		font-size: 32px
-		margin-top: 0
+		margin-top: 5px
 		font-weight: normal
 		color: $brown
 
@@ -51,23 +58,59 @@ header
 	border-radius: 2px
 
 a
-	color: $pale-yellow
+	color: $green
 
 	&:visited
-		color: $pale-yellow
+		color: $green
 
 
 
 
 // Schedule page (aka Timer!)
-
-#schedule li
-	color: #d3ce3d
-	margin-left: 0
+#flex-container
+	display: -webkit-flex
+	display: flex
 	width: 100%
-	position: relative
-	float: left
-	list-style-type: none
+	height: 100%
+	flex-wrap: wrap
+
+	div
+		flex: 1 100%
+
+#timer
+	text-align: center
+	height: auto
+
+	h1
+		padding: 0
+		margin: 0
+
+#schedule
+	background: $med-brown
+
+	h2
+		background: $white
+		color: $brown
+		width: 100%
+		margin: 0 0 5px
+		padding: 5px 0 0 20px
+		text-transform: uppercase
+		border-bottom: 3px solid $brown
+
+	ul
+		background: $med-brown
+		width: 100%
+		height: 100%
+		margin-bottom: 0
+		float: left
+
+	li
+		color: $green
+		margin-left: 0
+		width: 100%
+		position: relative
+		float: left
+		list-style-type: none
 
 .strike
 	text-decoration: line-through

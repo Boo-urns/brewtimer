@@ -18,16 +18,18 @@
 
   </head>
   <body>
-    <a href="#/schedule">Let's get Brewing!</a> 
-    <div ng-controller="FormCtrl">
     
+    <div ng-controller="FormCtrl">
       <header>
         <h1>{{user.name}}</h1>
       </header>
       
-      <div ng-view></div>
+      <a href="#/schedule">Let's get Brewing!</a> 
+
+      <section ng-view></section>
       
       
     </div>
+
   </body>
 </html>

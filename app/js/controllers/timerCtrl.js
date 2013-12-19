@@ -1,6 +1,6 @@
 app.controller( 'TimerCtrl', function CountdownCtrl($scope,$timeout) {
-    $scope.minutes  = $scope.master.boilTime,
-    $scope.seconds  = 0,
+    $scope.minutes  = $scope.master.boilTime;
+    $scope.seconds  = 0;
     $scope.pauseBtn = 1;
 
     $scope.startTimestamp = 0;
@@ -14,7 +14,6 @@ app.controller( 'TimerCtrl', function CountdownCtrl($scope,$timeout) {
 	    		$scope.started  = 1;
 	    	} else {
 	    		diff = (new Date().getTime() - $scope.startTimestamp) / 1000;
-	    		console.log(diff);
 	    	}
 				
  			// Why is timerPromise up top instead of bottom?

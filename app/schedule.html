@@ -14,7 +14,7 @@
 	<div id="schedule">
 	<h2>{{master.name}} Schedule</h2>
 	<ul id="schedule">
-		<li ng-repeat="schedule in master.boilSchedule | orderBy:master.boilSchedule.time" ng-class="{'strike' : schedule.checked, 'next' : schedule.time >= minutes - 2, 'current' : schedule.time >= minutes - 1 } ">
+		<li ng-repeat="schedule in master.boilSchedule | orderBy:'time':true" ng-class="{'strike' : schedule.checked, 'next' : schedule.time >= minutes - 2, 'current' : schedule.time >= minutes - 1 } ">
 			{{schedule.amt}}{{ schedule.unit }} {{schedule.name}} @ {{schedule.time}} 
 			<input type="checkbox" ng-model="schedule.checked">
 		</li>

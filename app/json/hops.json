@@ -24,8 +24,20 @@
         "sub": "Cascade, Centennial, Citra"
     },
     {
+        "name": "Apollo"
+    },
+    {
         "name": "Bravo"
     }, 
+    {
+        "name": "Brewer's Gold"
+    },
+    {
+        "name": "Bullion"
+    },
+    {
+        "name": "Calypso"
+    },
     {
         "name": "Cascade"
     }, 
@@ -33,9 +45,11 @@
         "name": "Centennial"
     }, 
     {
+        "name": "Challenger"
+    },
+    {
         "name": "Chinook"
     }, 
-
     {
     		"name": "Citra",
     		"country": "US",
@@ -46,7 +60,154 @@
 
     },
     {
+        "name": "Cluster"
+    },
+    {
+        "name": "Columbus"
+    },
+    {
+        "name": "Crystal"
+    },
+    {
+        "name": "El Dorado"
+    },
+    {
+        "name": "Ella"
+    },
+    {
+        "name": "Endeavour"
+    },
+    {
+        "name": "Eroica"
+    },
+    {
+        "name": "Falconer's Flight"
+    },
+    {
+        "name": "First Gold"
+    },
+    {
+        "name": "Fuggle"
+    },
+    {
+        "name": "Galaxy"
+    },
+    {
+        "name": "Galena"
+    },
+    {
+        "name": "German Spalt Select" 
+    },
+    {
+        "name": "Glacier"
+    },
+    {
+        "name": "Golding"
+    },
+    {
+        "name": "Green Bullet"
+    },
+    {
+        "name": "Hallertauer"
+    },
+    {
+        "name": "Hallertauer Mittelfrüh"
+    },
+    {
+        "name": "Hallertauer Tradition"
+    },
+    {
+        "name": "Horizon"
+    },
+    {
+        "name": "Kent Golding"
+    },
+    {
+        "name": "Liberty"
+    },
+    {
+        "name": "Magnum"
+    },
+    {
+        "name": "Motueka"
+    },
+    {
+        "name": "Mt. Hood"
+    },
+    {
+        "name": "Mt. Rainier"
+    },
+    {
+        "name": "Northdown"
+    },
+    {
+        "name": "Northern Brewer"
+    },
+    {
+        "name": "Nugget"
+    },
+    {
+        "name": "Olympic"
+    },
+    {
+        "name": "Pacifica"
+    },
+    {
+        "name": "Pacific Gem"
+    },
+    {
+        "name": "Pacific Jade"
+    },
+    {
+        "name": "Palisade"
+    },
+    {
         "name": "Perle"
+    },
+    {
+        "name": "Saaz"
+    },
+    {
+        "name": "Simcoe"
+    },
+    {
+        "name": "Sorachi Ace"
+    },
+    {
+        "name": "Spalt"
+    },
+    {
+        "name": "Sterling"
+    },
+    {
+        "name": "Styrian Golding"
+    },
+    {
+        "name": "Target"
+    },
+    {
+        "name": "Tettnanger"
+    },
+    {
+        "name": "Tomahawk"
+    },
+    {
+        "name": "Ultra"
+    },
+    {
+        "name": "Warrior"
+    },
+    {
+        "name": "Williamette"
+    },
+    {
+        "name": "Yakima Cluster"
+    },
+    {
+        "name": "Zeus"
+    },
+    {
+        "name": "Zythos"
     }
 
 ]

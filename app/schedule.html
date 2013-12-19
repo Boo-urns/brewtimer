@@ -5,9 +5,9 @@
 	<div id="timer">
 	<h1 class="boilTime">{{minutes}} : {{seconds | prependZero}}</h1>
 		
-	<button ng-click="start()" ng-disabled="started" ng-show="!started">START</button>  
+	<button ng-click="start()" ng-disabled="started" ng-show="!started" ng-model="startBtn" ng-hide="!pauseBtn || started">START</button>  
 	<button ng-model="pauseBtn" data-ng-click="pause()" ng-disabled="!started" ng-hide="!started">PAUSE</button> 
-	<button ng-click="resume()" ng-hide="pauseBtn" ng-disabled="pauseBtn">RESUME</button>
+	<button ng-click="resume()" ng-hide="pauseBtn" ng-model="resumeBtn" ng-disabled="startBtn">RESUME</button>
 
 </div>
 
